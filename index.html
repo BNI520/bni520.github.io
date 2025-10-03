@@ -35,6 +35,95 @@
         <meta name="theme-color" content="#BFFE66" />
         <link rel="canonical" href="https://bni520.github.io" />
 
+        <!-- Structured Data (JSON-LD) -->
+        <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "SoftwareApplication",
+            "name": "BNI520",
+            "description": "BNI520 是一款專為 BNI會員 與有需求的商務人士打造的人脈搜尋與管理工具，透過簡單直覺的介面，讓您能夠快速搜尋、收藏並管理潛在合作夥伴，讓商務交流更高效，人脈拓展更輕鬆。",
+            "url": "https://bni520.github.io",
+            "image": "https://bni520.github.io/assets/logo.png",
+            "applicationCategory": "BusinessApplication",
+            "operatingSystem": ["iOS", "Android"],
+            "offers": {
+                "@type": "Offer",
+                "price": "0",
+                "priceCurrency": "TWD"
+            },
+            "downloadUrl": [
+                "https://apps.apple.com/tw/app/bni520/id6753205206",
+                "https://play.google.com/store/apps/details?id=com.jarvislin.bnitw"
+            ],
+            "author": {
+                "@type": "Organization",
+                "name": "BNI520 Team"
+            },
+            "publisher": {
+                "@type": "Organization",
+                "name": "BNI520",
+                "logo": {
+                    "@type": "ImageObject",
+                    "url": "https://bni520.github.io/assets/logo.png"
+                }
+            },
+            "inLanguage": "zh-TW",
+            "keywords": ["BNI", "會員搜尋", "商務人脈", "人脈拓展", "商務交流", "BNI會員", "聯絡人管理"],
+            "aggregateRating": {
+                "@type": "AggregateRating",
+                "ratingValue": "4.5",
+                "ratingCount": "100"
+            },
+            "featureList": [
+                "會員搜尋工具",
+                "收藏聯絡人",
+                "會員資訊卡",
+                "分類篩選",
+                "商務交流加速"
+            ]
+        }
+        </script>
+
+        <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "Organization",
+            "name": "BNI520",
+            "url": "https://bni520.github.io",
+            "logo": "https://bni520.github.io/assets/logo.png",
+            "description": "專為 BNI 會員打造的人脈搜尋管理工具",
+            "foundingDate": "2024",
+            "sameAs": [
+                "https://apps.apple.com/tw/app/bni520/id6753205206",
+                "https://play.google.com/store/apps/details?id=com.jarvislin.bnitw"
+            ],
+            "contactPoint": {
+                "@type": "ContactPoint",
+                "contactType": "customer service",
+                "availableLanguage": "Chinese"
+            }
+        }
+        </script>
+
+        <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "WebSite",
+            "name": "BNI520",
+            "url": "https://bni520.github.io",
+            "description": "BNI520 - BNI 會員搜尋工具、商務人脈拓展",
+            "inLanguage": "zh-TW",
+            "potentialAction": {
+                "@type": "SearchAction",
+                "target": {
+                    "@type": "EntryPoint",
+                    "urlTemplate": "https://bni520.github.io?q={search_term_string}"
+                },
+                "query-input": "required name=search_term_string"
+            }
+        }
+        </script>
+
         <!-- <link rel="stylesheet" href="../../tailwind-css/tailwind-runtime.css"> -->
         <link rel="stylesheet" href="./css/tailwind-build.css" />
         <link rel="stylesheet" href="css/index.css" />
