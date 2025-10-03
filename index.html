@@ -43,6 +43,24 @@
             gtag('js', new Date());
 
             gtag('config', 'G-WBZHJ9KGZ4');
+
+            // 外部連結追蹤函數
+            function trackOutboundLink(url, linkText, platform) {
+                gtag('event', 'click', {
+                    event_category: 'outbound',
+                    event_label: url,
+                    custom_parameter_1: platform,
+                    custom_parameter_2: linkText
+                });
+                
+                // App 下載特定事件
+                gtag('event', 'app_download_click', {
+                    event_category: 'app_engagement',
+                    event_label: platform,
+                    custom_parameter_1: url,
+                    value: 1
+                });
+            }
         </script>
 
         <!-- Structured Data (JSON-LD) -->
@@ -173,7 +191,9 @@
                         class="reveal-hero-text tw-mt-4 tw-flex tw-place-items-center tw-gap-4 
                                 tw-overflow-hidden tw-p-2"
                     >
-                        <a class="tw-h-[50px] tw-max-w-[150px]" href="https://apps.apple.com/tw/app/bni520/id6753205206">
+                        <a class="tw-h-[50px] tw-max-w-[150px]" 
+                           href="https://apps.apple.com/tw/app/bni520/id6753205206"
+                           onclick="trackOutboundLink('https://apps.apple.com/tw/app/bni520/id6753205206', 'App Store Badge - Top', 'iOS'); return true;">
                             <img
                                 src="./assets/images/brand-logos/app-store-badge.png"
                                 alt="app store"
@@ -181,10 +201,12 @@
                                 srcset=""
                             />
                         </a>
-                        <a class="tw-h-[50px] tw-max-w-[150px]" href="https://play.google.com/store/apps/details?id=com.jarvislin.bnitw">
+                        <a class="tw-h-[50px] tw-max-w-[150px]" 
+                           href="https://play.google.com/store/apps/details?id=com.jarvislin.bnitw"
+                           onclick="trackOutboundLink('https://play.google.com/store/apps/details?id=com.jarvislin.bnitw', 'Google Play Badge - Top', 'Android'); return true;">
                             <img
                                 src="./assets/images/brand-logos/google-play-badge.png"
-                                alt="app store"
+                                alt="google play"
                                 class="tw-h-full tw-w-full"
                                 srcset=""
                             />
@@ -445,14 +467,18 @@
                         class="reveal-hero-text tw-mt-4 tw-flex tw-place-items-center tw-gap-4 
                                 tw-overflow-hidden tw-p-2"
                     >
-                        <a class="tw-h-[50px] tw-max-w-[150px]" href="https://apps.apple.com/tw/app/bni520/id6753205206">
+                        <a class="tw-h-[50px] tw-max-w-[150px]" 
+                           href="https://apps.apple.com/tw/app/bni520/id6753205206"
+                           onclick="trackOutboundLink('https://apps.apple.com/tw/app/bni520/id6753205206', 'App Store Badge - Footer', 'iOS'); return true;">
                             <img
                                 src="./assets/images/brand-logos/app-store-badge.png"
                                 alt="app store"
                                 class="tw-h-full tw-w-full"
                             />
                         </a>
-                        <a class="tw-h-[50px] tw-max-w-[150px]" href="https://play.google.com/store/apps/details?id=com.jarvislin.bnitw">
+                        <a class="tw-h-[50px] tw-max-w-[150px]" 
+                           href="https://play.google.com/store/apps/details?id=com.jarvislin.bnitw"
+                           onclick="trackOutboundLink('https://play.google.com/store/apps/details?id=com.jarvislin.bnitw', 'Google Play Badge - Footer', 'Android'); return true;">
                             <img
                                 src="./assets/images/brand-logos/google-play-badge.png"
                                 alt="google play"
